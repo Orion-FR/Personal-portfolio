@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Paul Robain — Computer Engineering Student at EPITA, Web Development Intern at Airbus, based in Toulouse, France." />
   <meta name="author" content="Paul Robain" />
+  <meta name="color-scheme" content="light dark" />
   <meta property="og:title" content="Paul Robain — Portfolio" />
   <meta property="og:description" content="Computer Engineering Student · Web Developer · Car Enthusiast" />
   <meta property="og:type" content="website" />
@@ -27,12 +28,18 @@
   <nav class="nav glass" aria-label="Main navigation">
     <a href="#hero" class="nav-brand">PR</a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+      <li><a href="#education" data-i18n="nav.education">Education</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
     </ul>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+      <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+      <button class="lang-btn" data-lang="es" aria-label="Español">ES</button>
+      <button class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
+    </div>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -43,30 +50,26 @@
     <section id="hero" class="hero">
       <div class="hero-inner">
         <div class="hero-text reveal">
-          <span class="eyebrow glass-chip">Available for Summer 2026 · Toulouse, France</span>
+          <span class="eyebrow glass-chip" data-i18n="hero.eyebrow">Available for Summer 2026 · Toulouse, France</span>
           <h1 class="hero-title">
-            Hi, I'm <span class="gradient-text">Paul Robain</span>
+            <span data-i18n="hero.greeting">Hi, I'm</span>
+            <span class="gradient-text">Paul Robain</span>
           </h1>
-          <p class="hero-subtitle">
-            Computer Engineering Student at EPITA &nbsp;·&nbsp; Web Development Intern at Airbus
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Computer Engineering Student at EPITA · Web Development Intern at Airbus
           </p>
-          <p class="hero-tagline">
-            Crafting intuitive interfaces and clean code. Passionate about frontend engineering, cars, and everything in between.
+          <p class="hero-tagline" data-i18n="hero.tagline">
+            Crafting intuitive interfaces and clean code. Passionate about computer engineering, cars, and everything in between.
           </p>
           <div class="hero-ctas">
-            <a href="#contact" class="btn btn-primary">Get in touch</a>
-            <a href="#experience" class="btn btn-ghost glass">See my work</a>
+            <a href="#contact" class="btn btn-primary" data-i18n="hero.cta_primary">Get in touch</a>
+            <a href="#experience" class="btn btn-ghost glass" data-i18n="hero.cta_secondary">See my work</a>
           </div>
         </div>
 
         <div class="hero-portrait reveal">
           <div class="portrait-glass glass">
-            <img
-              src="assets/profile.jpg"
-              alt="Portrait of Paul Robain"
-              loading="eager"
-              onerror="this.src='https://media.licdn.com/dms/image/v2/D4D03AQEF-hXmx_6RyA/profile-displayphoto-shrink_400_400/B4DZbyi2ZyHEAg-/0/1747825947473?e=1778716800&v=beta&t=4Jw6J1egexHLHp5hzc0JI-_PU7pAX_wFo7zry8XpOpw'"
-            />
+            <img src="assets/profile.jpg" alt="Paul Robain" loading="eager" />
           </div>
           <div class="portrait-orbit" aria-hidden="true">
             <span class="orbit-dot orbit-dot-1"></span>
@@ -84,30 +87,30 @@
     <section id="about" class="section">
       <div class="section-head reveal">
         <span class="section-number">01</span>
-        <h2 class="section-title">About me</h2>
+        <h2 class="section-title" data-i18n="about.title">About me</h2>
       </div>
       <div class="about-grid">
         <article class="glass card reveal">
-          <p class="about-lead">
+          <p class="about-lead" data-i18n="about.p1" data-i18n-html>
             I'm a computer engineering student at <strong>EPITA</strong>, currently interning as a
             front-end developer at <strong>Airbus</strong>. I enjoy turning complex business needs
             into interfaces that just feel right.
           </p>
-          <p>
-            Beyond code, I'm a car enthusiast and proud <strong>Alfa Romeo brand ambassador</strong>.
+          <p data-i18n="about.p2" data-i18n-html>
+            Beyond code, I'm a car enthusiast and proud <strong>Alfa Romeo</strong> brand ambassador.
             Whether I'm building a proof of concept or tuning an engine, I care about the same
             thing: precision, craft, and details that make the whole thing sing.
           </p>
         </article>
 
         <aside class="glass card card-compact reveal">
-          <h3 class="card-title">Quick facts</h3>
+          <h3 class="card-title" data-i18n="about.facts_title">Quick facts</h3>
           <ul class="fact-list">
-            <li><span>📍</span> Toulouse, France</li>
-            <li><span>🎓</span> EPITA · Ing. 2029</li>
-            <li><span>🌏</span> Exchange · RMIT Vietnam</li>
-            <li><span>💼</span> Intern @ Airbus</li>
-            <li><span>🏎️</span> Alfa Romeo ambassador</li>
+            <li><span>📍</span> <span data-i18n="about.fact_1">Toulouse, France</span></li>
+            <li><span>🎓</span> <span data-i18n="about.fact_2">EPITA · Ing. 2029</span></li>
+            <li><span>🌏</span> <span data-i18n="about.fact_3">Exchange · RMIT Vietnam</span></li>
+            <li><span>💼</span> <span data-i18n="about.fact_4">Intern @ Airbus</span></li>
+            <li><span>🏎️</span> <span data-i18n="about.fact_5">Alfa Romeo ambassador</span></li>
           </ul>
         </aside>
       </div>
@@ -117,7 +120,7 @@
     <section id="experience" class="section">
       <div class="section-head reveal">
         <span class="section-number">02</span>
-        <h2 class="section-title">Experience</h2>
+        <h2 class="section-title" data-i18n="exp.title">Experience</h2>
       </div>
 
       <ol class="timeline">
@@ -125,17 +128,18 @@
           <div class="timeline-marker"></div>
           <article class="glass card">
             <header class="card-header">
-              <div>
-                <h3 class="card-title">Web Development Intern</h3>
-                <p class="card-org">Airbus · Internship</p>
+              <img class="card-logo" src="assets/airbusgroup_logo.jpeg" alt="Airbus" />
+              <div class="card-header-text">
+                <h3 class="card-title" data-i18n="exp.airbus_role">Web Development Intern</h3>
+                <p class="card-org" data-i18n="exp.airbus_org">Airbus · Internship</p>
               </div>
-              <span class="badge">Apr 2026 — Present</span>
+              <span class="badge" data-i18n="exp.airbus_date">Apr 2026 — May 2026</span>
             </header>
-            <p class="card-location">Blagnac, Occitanie · On-site</p>
+            <p class="card-location" data-i18n="exp.airbus_location">Blagnac, Occitanie · On-site</p>
             <ul class="bullet-list">
-              <li>Front-end development of a web application for an innovative internal project.</li>
-              <li>Designed and delivered a proof of concept to validate new features technically.</li>
-              <li>Worked in an agile team to turn business needs into intuitive interfaces.</li>
+              <li data-i18n="exp.airbus_b1">Front-end development of a web application for an innovative internal project.</li>
+              <li data-i18n="exp.airbus_b2">Designed and delivered a proof of concept to validate new features technically.</li>
+              <li data-i18n="exp.airbus_b3">Worked in an agile team to turn business needs into intuitive interfaces.</li>
             </ul>
           </article>
         </li>
@@ -144,13 +148,14 @@
           <div class="timeline-marker"></div>
           <article class="glass card">
             <header class="card-header">
-              <div>
-                <h3 class="card-title">Brand Ambassador</h3>
-                <p class="card-org">Alfa Romeo · Freelance</p>
+              <img class="card-logo" src="assets/alfa_romeo_logo.jpeg" alt="Alfa Romeo" />
+              <div class="card-header-text">
+                <h3 class="card-title" data-i18n="exp.alfa_role">Brand Ambassador</h3>
+                <p class="card-org" data-i18n="exp.alfa_org">Alfa Romeo · Freelance</p>
               </div>
-              <span class="badge">Apr 2025 — Present</span>
+              <span class="badge" data-i18n="exp.alfa_date">Apr 2025 — Present</span>
             </header>
-            <p class="card-description">
+            <p class="card-description" data-i18n="exp.alfa_desc">
               Representing the Alfa Romeo brand at events and online, sharing the passion for
               Italian design and engineering with a growing community.
             </p>
@@ -161,13 +166,14 @@
           <div class="timeline-marker"></div>
           <article class="glass card">
             <header class="card-header">
-              <div>
-                <h3 class="card-title">Mechanic / Fitter</h3>
-                <p class="card-org">Norauto France · Fixed-term contract</p>
+              <img class="card-logo" src="assets/norauto_logo.jpeg" alt="Norauto" />
+              <div class="card-header-text">
+                <h3 class="card-title" data-i18n="exp.norauto_role">Mechanic / Fitter</h3>
+                <p class="card-org" data-i18n="exp.norauto_org">Norauto France · Fixed-term contract</p>
               </div>
-              <span class="badge">Jul — Aug 2025</span>
+              <span class="badge" data-i18n="exp.norauto1_date">Jul — Aug 2025</span>
             </header>
-            <p class="card-location">Toulouse, Occitanie · On-site</p>
+            <p class="card-location" data-i18n="exp.norauto_location">Toulouse, Occitanie · On-site</p>
           </article>
         </li>
 
@@ -175,13 +181,14 @@
           <div class="timeline-marker"></div>
           <article class="glass card">
             <header class="card-header">
-              <div>
-                <h3 class="card-title">Mechanic / Fitter</h3>
-                <p class="card-org">Norauto France · Fixed-term contract</p>
+              <img class="card-logo" src="assets/norauto_logo.jpeg" alt="Norauto" />
+              <div class="card-header-text">
+                <h3 class="card-title" data-i18n="exp.norauto_role">Mechanic / Fitter</h3>
+                <p class="card-org" data-i18n="exp.norauto_org">Norauto France · Fixed-term contract</p>
               </div>
-              <span class="badge">Jul — Aug 2024</span>
+              <span class="badge" data-i18n="exp.norauto2_date">Jul — Aug 2024</span>
             </header>
-            <p class="card-location">Toulouse, Occitanie · On-site</p>
+            <p class="card-location" data-i18n="exp.norauto_location">Toulouse, Occitanie · On-site</p>
           </article>
         </li>
       </ol>
@@ -191,35 +198,44 @@
     <section id="education" class="section">
       <div class="section-head reveal">
         <span class="section-number">03</span>
-        <h2 class="section-title">Education</h2>
+        <h2 class="section-title" data-i18n="edu.title">Education</h2>
       </div>
 
       <div class="grid-3">
         <article class="glass card reveal">
-          <span class="badge badge-soft">Sep 2023 — Jun 2029</span>
-          <h3 class="card-title">EPITA</h3>
-          <p class="card-org">School of Computer Science Engineering</p>
-          <p class="card-description">
+          <div class="card-logo-row">
+            <img class="card-logo" src="assets/epita_logo.jpeg" alt="EPITA" />
+            <span class="badge badge-soft" data-i18n="edu.epita_date">Sep 2023 — Jun 2029</span>
+          </div>
+          <h3 class="card-title" data-i18n="edu.epita_title">EPITA</h3>
+          <p class="card-org" data-i18n="edu.epita_org">School of Computer Science Engineering</p>
+          <p class="card-description" data-i18n="edu.epita_desc">
             Engineering degree (M.Sc.) in Computer Engineering — a five-year program focused on
             software engineering, algorithms, and systems.
           </p>
         </article>
 
         <article class="glass card reveal">
-          <span class="badge badge-soft">Feb — Jun 2025</span>
-          <h3 class="card-title">RMIT University Vietnam</h3>
-          <p class="card-org">Computer Programming, Specific Applications</p>
-          <p class="card-description">
+          <div class="card-logo-row">
+            <img class="card-logo" src="assets/rmit_logo.jpeg" alt="RMIT Vietnam" />
+            <span class="badge badge-soft" data-i18n="edu.rmit_date">Feb — Jun 2025</span>
+          </div>
+          <h3 class="card-title" data-i18n="edu.rmit_title">RMIT University Vietnam</h3>
+          <p class="card-org" data-i18n="edu.rmit_org">Computer Programming, Specific Applications</p>
+          <p class="card-description" data-i18n="edu.rmit_desc">
             International exchange semester, broadening my perspective on software development
             and cross-cultural teamwork.
           </p>
         </article>
 
         <article class="glass card reveal">
-          <span class="badge badge-soft">Sep 2019 — Jun 2022</span>
-          <h3 class="card-title">Lycée Émilie de Rodat</h3>
-          <p class="card-org">French Baccalaureate — with honors</p>
-          <p class="card-description">
+          <div class="card-logo-row">
+            <div class="card-logo card-logo-text">ER</div>
+            <span class="badge badge-soft" data-i18n="edu.lycee_date">Sep 2019 — Jun 2022</span>
+          </div>
+          <h3 class="card-title" data-i18n="edu.lycee_title">Lycée Émilie de Rodat</h3>
+          <p class="card-org" data-i18n="edu.lycee_org">French Baccalaureate — with honors</p>
+          <p class="card-description" data-i18n="edu.lycee_desc">
             Specializations in Mathematics and Computer Science (NSI).
           </p>
         </article>
@@ -230,21 +246,21 @@
     <section id="projects" class="section">
       <div class="section-head reveal">
         <span class="section-number">04</span>
-        <h2 class="section-title">Projects</h2>
+        <h2 class="section-title" data-i18n="proj.title">Projects</h2>
       </div>
 
       <div class="grid-2">
         <article class="glass card card-feature reveal">
-          <span class="badge badge-soft">Sep — Dec 2024 · EPITA</span>
-          <h3 class="card-title">Computer Vision–Based Crossword Solver</h3>
-          <p class="card-description">
+          <span class="badge badge-soft" data-i18n="proj.crossword_date">Sep — Dec 2024 · EPITA</span>
+          <h3 class="card-title" data-i18n="proj.crossword_title">Computer Vision–Based Crossword Solver</h3>
+          <p class="card-description" data-i18n="proj.crossword_desc">
             An OCR pipeline and solving engine that reads a crossword grid from an image and
             fills it in automatically.
           </p>
           <ul class="bullet-list">
-            <li>Built an OCR system that dynamically extracts grid structures from images.</li>
-            <li>Implemented a logic-solving engine to automate complex puzzle processing.</li>
-            <li>Optimized image preprocessing for reliable recognition in variable conditions.</li>
+            <li data-i18n="proj.crossword_b1">Built an OCR system that dynamically extracts grid structures from images.</li>
+            <li data-i18n="proj.crossword_b2">Implemented a logic-solving engine to automate complex puzzle processing.</li>
+            <li data-i18n="proj.crossword_b3">Optimized image preprocessing for reliable recognition in variable conditions.</li>
           </ul>
           <div class="tag-row">
             <span class="tag">OCR</span>
@@ -254,8 +270,8 @@
         </article>
 
         <article class="glass card card-placeholder reveal">
-          <h3 class="card-title">More coming soon</h3>
-          <p class="card-description">
+          <h3 class="card-title" data-i18n="proj.soon_title">More coming soon</h3>
+          <p class="card-description" data-i18n="proj.soon_desc">
             New projects and experiments will land here. Check back, or ping me on LinkedIn to
             chat about what I'm working on.
           </p>
@@ -267,20 +283,72 @@
     <section id="certifications" class="section">
       <div class="section-head reveal">
         <span class="section-number">05</span>
-        <h2 class="section-title">Certifications</h2>
+        <h2 class="section-title" data-i18n="cert.title">Certifications</h2>
       </div>
 
       <div class="grid-2">
         <article class="glass card reveal">
-          <span class="badge badge-soft">Issued Sep 2025</span>
-          <h3 class="card-title">TASK — Assessment of Sustainability Knowledge</h3>
-          <p class="card-org">Sulitest</p>
+          <div class="card-logo-row">
+            <img class="card-logo" src="assets/TASK_logo.jpeg" alt="Sulitest" />
+            <span class="badge badge-soft" data-i18n="cert.task_date">Issued Sep 2025</span>
+          </div>
+          <h3 class="card-title" data-i18n="cert.task_title">TASK — Assessment of Sustainability Knowledge</h3>
+          <p class="card-org" data-i18n="cert.task_org">Sulitest</p>
         </article>
 
         <article class="glass card reveal">
-          <span class="badge badge-soft">Issued Jul 2020</span>
-          <h3 class="card-title">Cambridge English — ESOL International (Entry 3)</h3>
-          <p class="card-org">Cambridge English · ID B2309458</p>
+          <div class="card-logo-row">
+            <img class="card-logo" src="assets/cambridge_logo.jpeg" alt="Cambridge English" />
+            <span class="badge badge-soft" data-i18n="cert.camb_date">Issued Jul 2020</span>
+          </div>
+          <h3 class="card-title" data-i18n="cert.camb_title">Cambridge English — ESOL International (Entry 3)</h3>
+          <p class="card-org" data-i18n="cert.camb_org">Cambridge English · ID B2309458</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Languages -->
+    <section id="languages" class="section">
+      <div class="section-head reveal">
+        <span class="section-number">06</span>
+        <h2 class="section-title" data-i18n="lang.title">Languages</h2>
+      </div>
+
+      <div class="grid-4">
+        <article class="glass card card-lang reveal">
+          <span class="flag" aria-hidden="true">🇫🇷</span>
+          <h3 class="card-title" data-i18n="lang.fr_name">French</h3>
+          <p class="card-org" data-i18n="lang.fr_level">Native speaker</p>
+          <div class="cefr-bar" data-level="6" aria-label="Native level">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </article>
+
+        <article class="glass card card-lang reveal">
+          <span class="flag" aria-hidden="true">🇬🇧</span>
+          <h3 class="card-title" data-i18n="lang.en_name">English</h3>
+          <p class="card-org" data-i18n="lang.en_level">C1 — Advanced</p>
+          <div class="cefr-bar" data-level="5" aria-label="C1">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </article>
+
+        <article class="glass card card-lang reveal">
+          <span class="flag" aria-hidden="true">🇪🇸</span>
+          <h3 class="card-title" data-i18n="lang.es_name">Spanish</h3>
+          <p class="card-org" data-i18n="lang.es_level">B2 — Upper intermediate</p>
+          <div class="cefr-bar" data-level="4" aria-label="B2">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </article>
+
+        <article class="glass card card-lang reveal">
+          <span class="flag" aria-hidden="true">🇮🇹</span>
+          <h3 class="card-title" data-i18n="lang.it_name">Italian</h3>
+          <p class="card-org" data-i18n="lang.it_level">A2 — Beginner</p>
+          <div class="cefr-bar" data-level="1" aria-label="A1">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
         </article>
       </div>
     </section>
@@ -288,9 +356,9 @@
     <!-- Contact -->
     <section id="contact" class="section section-contact">
       <div class="glass card card-contact reveal">
-        <span class="section-number">06</span>
-        <h2 class="section-title">Let's talk</h2>
-        <p class="contact-lead">
+        <span class="section-number">07</span>
+        <h2 class="section-title" data-i18n="contact.title">Let's talk</h2>
+        <p class="contact-lead" data-i18n="contact.lead">
           I'm always open to chatting about internships, collaborations, or anything web and cars.
         </p>
         <div class="contact-actions">
@@ -306,7 +374,7 @@
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Paul Robain · Built with vanilla HTML, CSS &amp; JS</p>
+    <p>© <span id="year"></span> <span data-i18n="footer.text">Paul Robain</span></p>
   </footer>
 
   <script src="script.js" defer></script>
