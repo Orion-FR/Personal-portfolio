@@ -10,6 +10,7 @@
       'nav.experience': 'Experience',
       'nav.education': 'Education',
       'nav.projects': 'Projects',
+      'nav.freelance': 'Freelance',
       'nav.contact': 'Contact',
 
       'hero.eyebrow': 'Available for Summer 2026 · Toulouse, France',
@@ -71,6 +72,18 @@
       'proj.soon_title': 'More coming soon',
       'proj.soon_desc': 'New projects and experiments will land here. Check back, or ping me on LinkedIn to chat about what I\'m working on.',
 
+      'freelance.title': 'Freelance web design',
+      'freelance.p1': 'Beyond my studies and internship, I also design and build <strong>custom websites</strong> as a freelancer — for individuals, creators, and small businesses. From the first sketch to the live deployment, I take care of the whole journey.',
+      'freelance.p2': 'Clean aesthetics, smooth performance, and a result that actually matches your brand. Want a quote? Just send me an email — it\'s free and no strings attached.',
+      'freelance.cta': 'Request a quote',
+      'freelance.cta_secondary': 'contact@paulrobain.fr',
+      'freelance.offer_title': 'What I offer',
+      'freelance.offer_1': 'Tailored, on-brand design',
+      'freelance.offer_2': 'Fast, responsive front-end',
+      'freelance.offer_3': 'Accessible by default',
+      'freelance.offer_4': 'End-to-end delivery',
+      'freelance.offer_5': 'Free quote by email',
+
       'cert.title': 'Certifications',
       'cert.task_date': 'Issued Sep 2025',
       'cert.task_title': 'TASK — Assessment of Sustainability Knowledge',
@@ -90,7 +103,7 @@
       'lang.it_level': 'A2 — Beginner',
 
       'contact.title': "Let's talk",
-      'contact.lead': "I'm always open to chatting about internships, collaborations, or anything web and cars.",
+      'contact.lead': "I'm always open to chatting about internships, collaborations, website projects, or anything cars.",
 
       'footer.text': 'Paul Robain',
     },
@@ -100,6 +113,7 @@
       'nav.experience': 'Expérience',
       'nav.education': 'Formation',
       'nav.projects': 'Projets',
+      'nav.freelance': 'Freelance',
       'nav.contact': 'Contact',
 
       'hero.eyebrow': 'Disponible été 2026 · Toulouse, France',
@@ -161,6 +175,18 @@
       'proj.soon_title': 'D\'autres projets arrivent',
       'proj.soon_desc': 'De nouveaux projets et expérimentations viendront s\'ajouter ici. Revenez y jeter un œil, ou écrivez-moi sur LinkedIn pour en discuter.',
 
+      'freelance.title': 'Conception de sites web en freelance',
+      'freelance.p1': 'À côté de mes études et de mon stage, je conçois et développe aussi des <strong>sites web sur mesure</strong> en freelance — pour des particuliers, des créateurs et des petites entreprises. Du premier croquis à la mise en ligne, je m\'occupe de tout.',
+      'freelance.p2': 'Esthétique soignée, performances fluides et un rendu vraiment fidèle à votre identité. Envie d\'un devis ? Un simple mail suffit — c\'est gratuit et sans engagement.',
+      'freelance.cta': 'Demander un devis',
+      'freelance.cta_secondary': 'contact@paulrobain.fr',
+      'freelance.offer_title': 'Ce que je propose',
+      'freelance.offer_1': 'Design sur mesure, fidèle à votre identité',
+      'freelance.offer_2': 'Front-end rapide et responsive',
+      'freelance.offer_3': 'Accessible par défaut',
+      'freelance.offer_4': 'Du brief à la mise en ligne',
+      'freelance.offer_5': 'Devis gratuit par mail',
+
       'cert.title': 'Certifications',
       'cert.task_date': 'Émise en sept. 2025',
       'cert.task_title': 'TASK — Assessment of Sustainability Knowledge',
@@ -180,7 +206,7 @@
       'lang.it_level': 'A2 — Débutant',
 
       'contact.title': 'Parlons-en',
-      'contact.lead': 'Toujours partant pour discuter d\'un stage, d\'une collaboration, de web ou de voitures.',
+      'contact.lead': 'Toujours partant pour discuter d\'un stage, d\'une collaboration, d\'un projet de site web, ou de voitures.',
 
       'footer.text': 'Paul Robain',
     },
@@ -190,6 +216,7 @@
       'nav.experience': 'Experiencia',
       'nav.education': 'Formación',
       'nav.projects': 'Proyectos',
+      'nav.freelance': 'Freelance',
       'nav.contact': 'Contacto',
 
       'hero.eyebrow': 'Disponible verano 2026 · Toulouse, Francia',
@@ -251,6 +278,18 @@
       'proj.soon_title': 'Más proyectos próximamente',
       'proj.soon_desc': 'Aquí irán llegando nuevos proyectos y experimentos. Vuelve a echar un vistazo, o escríbeme en LinkedIn para charlar.',
 
+      'freelance.title': 'Diseño web freelance',
+      'freelance.p1': 'Además de mis estudios y mis prácticas, también diseño y desarrollo <strong>sitios web a medida</strong> como freelance — para particulares, creadores y pequeñas empresas. Desde el primer boceto hasta la puesta en línea, me ocupo de todo el proceso.',
+      'freelance.p2': 'Estética cuidada, rendimiento fluido y un resultado realmente fiel a tu identidad. ¿Quieres un presupuesto? Basta un email — es gratis y sin compromiso.',
+      'freelance.cta': 'Pedir presupuesto',
+      'freelance.cta_secondary': 'contact@paulrobain.fr',
+      'freelance.offer_title': 'Lo que ofrezco',
+      'freelance.offer_1': 'Diseño a medida, fiel a tu identidad',
+      'freelance.offer_2': 'Front-end rápido y responsive',
+      'freelance.offer_3': 'Accesible por defecto',
+      'freelance.offer_4': 'Del brief a la puesta en línea',
+      'freelance.offer_5': 'Presupuesto gratuito por email',
+
       'cert.title': 'Certificaciones',
       'cert.task_date': 'Emitido sep. 2025',
       'cert.task_title': 'TASK — Assessment of Sustainability Knowledge',
@@ -270,7 +309,7 @@
       'lang.it_level': 'A2 — Principiante',
 
       'contact.title': 'Hablemos',
-      'contact.lead': 'Siempre abierto a charlar sobre prácticas, colaboraciones, web o coches.',
+      'contact.lead': 'Siempre abierto a charlar sobre prácticas, colaboraciones, proyectos web o coches.',
 
       'footer.text': 'Paul Robain',
     },
@@ -280,6 +319,7 @@
       'nav.experience': 'Esperienza',
       'nav.education': 'Formazione',
       'nav.projects': 'Progetti',
+      'nav.freelance': 'Freelance',
       'nav.contact': 'Contatti',
 
       'hero.eyebrow': 'Disponibile estate 2026 · Tolosa, Francia',
@@ -341,6 +381,18 @@
       'proj.soon_title': 'Altri progetti in arrivo',
       'proj.soon_desc': 'Qui arriveranno nuovi progetti ed esperimenti. Torna a dare un\'occhiata, o scrivimi su LinkedIn per parlarne.',
 
+      'freelance.title': 'Web design freelance',
+      'freelance.p1': 'Oltre agli studi e allo stage, progetto e sviluppo anche <strong>siti web su misura</strong> come freelance — per privati, creatori e piccole imprese. Dal primo schizzo alla messa online, mi occupo di tutto.',
+      'freelance.p2': 'Estetica curata, prestazioni fluide e un risultato davvero fedele alla tua identità. Vuoi un preventivo? Basta una mail — è gratuito e senza impegno.',
+      'freelance.cta': 'Richiedi un preventivo',
+      'freelance.cta_secondary': 'contact@paulrobain.fr',
+      'freelance.offer_title': 'Cosa offro',
+      'freelance.offer_1': 'Design su misura, fedele alla tua identità',
+      'freelance.offer_2': 'Front-end veloce e responsive',
+      'freelance.offer_3': 'Accessibile di default',
+      'freelance.offer_4': 'Dal brief alla messa online',
+      'freelance.offer_5': 'Preventivo gratuito via mail',
+
       'cert.title': 'Certificazioni',
       'cert.task_date': 'Rilasciato set. 2025',
       'cert.task_title': 'TASK — Assessment of Sustainability Knowledge',
@@ -360,7 +412,7 @@
       'lang.it_level': 'A2 — Principiante',
 
       'contact.title': 'Parliamone',
-      'contact.lead': 'Sempre aperto a parlare di stage, collaborazioni, web o auto.',
+      'contact.lead': 'Sempre aperto a parlare di stage, collaborazioni, progetti web o auto.',
 
       'footer.text': 'Paul Robain',
     },

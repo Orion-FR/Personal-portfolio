@@ -33,6 +33,9 @@
   --logo-bg: #ffffff;
   --tag-bg: rgba(74, 144, 226, 0.1);
 
+  --menu-bg: rgba(255, 255, 255, 0.92);
+  --menu-border: rgba(255, 255, 255, 0.9);
+
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Space Grotesk', var(--font-sans);
 
@@ -74,6 +77,9 @@
 
     --logo-bg: #f3f6fa;
     --tag-bg: rgba(107, 168, 232, 0.14);
+
+    --menu-bg: rgba(14, 22, 40, 0.9);
+    --menu-border: rgba(255, 255, 255, 0.14);
   }
 }
 
@@ -206,6 +212,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   font-size: 14px;
   font-weight: 500;
   color: var(--text-muted);
+  white-space: nowrap;
   transition: all 0.25s var(--ease-out);
 }
 .nav-links a:hover {
@@ -584,7 +591,9 @@ main { position: relative; z-index: 1; }
 .timeline-item { position: relative; margin-bottom: 24px; }
 .timeline-marker {
   position: absolute;
-  left: -34px; top: 28px;
+  /* Line center is at x=11px (left:10px + width:2px/2). Item starts at x=36px
+     (timeline padding-left). Marker must sit at x=1px so 1 + 20/2 = 11 matches. */
+  left: -35px; top: 28px;
   width: 20px; height: 20px;
   border-radius: 50%;
   background: var(--bg-mid);
@@ -647,6 +656,9 @@ main { position: relative; z-index: 1; }
   font-weight: 500;
 }
 
+/* Card CTA row (e.g. freelance service card) */
+.card-cta-row { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 12px; }
+
 /* Contact */
 .section-contact { max-width: 720px; }
 .card-contact { padding: 56px 48px; text-align: center; }
@@ -699,13 +711,18 @@ main { position: relative; z-index: 1; }
     top: calc(100% + 10px);
     right: 0;
     flex-direction: column;
-    background: var(--glass-bg-strong);
-    backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid var(--glass-border);
+    background: var(--menu-bg);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid var(--menu-border);
     border-radius: var(--radius);
     padding: 8px;
     min-width: 180px;
     box-shadow: var(--glass-shadow);
+  }
+  .nav-links.open a {
+    color: var(--text);
+    font-weight: 500;
   }
   .nav-toggle { display: flex; }
 }
