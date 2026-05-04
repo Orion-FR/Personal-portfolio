@@ -1,13 +1,13 @@
 /* ==========================================================================
    Arctic Mist — Liquid Glass Design System
-   Light + dark theme (auto via prefers-color-scheme).
+   Light + dark theme.
    ========================================================================== */
 
 /* ---------- Tokens (light) ---------- */
 :root {
-  --bg-start: #eef3f9;
-  --bg-mid: #e3ecf6;
-  --bg-end: #d8e5f2;
+  --bg-start: #dceaf5;
+  --bg-mid: #c8dcf0;
+  --bg-end: #b6cee9;
 
   --glass-bg: rgba(255, 255, 255, 0.55);
   --glass-bg-strong: rgba(255, 255, 255, 0.72);
@@ -48,39 +48,37 @@
 }
 
 /* ---------- Tokens (dark) ---------- */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-start: #0a1020;
-    --bg-mid: #0e1628;
-    --bg-end: #0a1324;
+.is-dark {
+  --bg-start: #0a1020;
+  --bg-mid: #0e1628;
+  --bg-end: #0a1324;
 
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-bg-strong: rgba(255, 255, 255, 0.09);
-    --glass-border: rgba(255, 255, 255, 0.12);
-    --glass-shadow: 0 10px 40px -12px rgba(0, 0, 0, 0.55),
-                    0 2px 6px rgba(0, 0, 0, 0.3),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.08);
-    --glass-shadow-hover: 0 20px 50px -12px rgba(0, 0, 0, 0.7),
-                          0 4px 10px rgba(0, 0, 0, 0.4),
-                          inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-bg-strong: rgba(255, 255, 255, 0.09);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-shadow: 0 10px 40px -12px rgba(0, 0, 0, 0.55),
+                  0 2px 6px rgba(0, 0, 0, 0.3),
+                  inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --glass-shadow-hover: 0 20px 50px -12px rgba(0, 0, 0, 0.7),
+                        0 4px 10px rgba(0, 0, 0, 0.4),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.12);
 
-    --accent: #6ba8e8;
-    --accent-deep: #8fc0f0;
-    --accent-light: #a8c5e8;
-    --accent-glow: rgba(107, 168, 232, 0.45);
-    --accent-soft-bg: rgba(107, 168, 232, 0.14);
-    --accent-soft-bg-strong: rgba(107, 168, 232, 0.18);
+  --accent: #6ba8e8;
+  --accent-deep: #8fc0f0;
+  --accent-light: #a8c5e8;
+  --accent-glow: rgba(107, 168, 232, 0.45);
+  --accent-soft-bg: rgba(107, 168, 232, 0.14);
+  --accent-soft-bg-strong: rgba(107, 168, 232, 0.18);
 
-    --text: #e8eef5;
-    --text-muted: #a8b8cc;
-    --text-soft: #7a8ba0;
+  --text: #e8eef5;
+  --text-muted: #a8b8cc;
+  --text-soft: #7a8ba0;
 
-    --logo-bg: #f3f6fa;
-    --tag-bg: rgba(107, 168, 232, 0.14);
+  --logo-bg: #f3f6fa;
+  --tag-bg: rgba(107, 168, 232, 0.14);
 
-    --menu-bg: rgba(14, 22, 40, 0.9);
-    --menu-border: rgba(255, 255, 255, 0.14);
-  }
+  --menu-bg: rgba(14, 22, 40, 0.9);
+  --menu-border: rgba(255, 255, 255, 0.14);
 }
 
 /* ---------- Reset ---------- */
@@ -135,11 +133,9 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   background: radial-gradient(circle, #c9dceb 0%, transparent 70%);
   animation-delay: -14s;
 }
-@media (prefers-color-scheme: dark) {
-  .blob-1 { background: radial-gradient(circle, #1e3a6b 0%, transparent 70%); opacity: 0.7; }
-  .blob-2 { background: radial-gradient(circle, #2a4a7a 0%, transparent 70%); opacity: 0.6; }
-  .blob-3 { background: radial-gradient(circle, #163254 0%, transparent 70%); opacity: 0.55; }
-}
+.is-dark .blob-1 { background: radial-gradient(circle, #1e3a6b 0%, transparent 70%); opacity: 0.7; }
+.is-dark .blob-2 { background: radial-gradient(circle, #2a4a7a 0%, transparent 70%); opacity: 0.6; }
+.is-dark .blob-3 { background: radial-gradient(circle, #163254 0%, transparent 70%); opacity: 0.55; }
 @keyframes float {
   0%, 100% { transform: translate(0, 0) scale(1); }
   33%      { transform: translate(40px, -30px) scale(1.05); }
@@ -152,9 +148,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }
-@media (prefers-color-scheme: dark) {
-  .grain { opacity: 0.05; mix-blend-mode: screen; }
-}
+.is-dark .grain { opacity: 0.05; mix-blend-mode: screen; }
 
 /* ---------- Glass primitive ---------- */
 .glass {
@@ -347,8 +341,6 @@ main { position: relative; z-index: 1; }
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 0.01em;
-  /* Specific properties only — `transition: all` triggers on every prop the
-     browser ever paints (Emil Kowalski rule). */
   transition: transform 0.25s var(--ease-out),
               box-shadow 0.3s var(--ease-out),
               background 0.25s var(--ease-out),
@@ -366,14 +358,12 @@ main { position: relative; z-index: 1; }
   box-shadow: 0 14px 30px -8px var(--accent-glow),
               inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
-/* Tactile press: ~40ms, no smoothing — feels physical, not animated */
 .btn:active { transform: translateY(0) scale(0.97); transition-duration: 60ms; }
 .btn-ghost { color: var(--text); padding: 13px 27px; }
 .btn-ghost:hover {
   transform: translateY(-2px);
   background: var(--glass-bg-strong);
 }
-/* Lang buttons get tactile too */
 .lang-btn:active { transform: scale(0.94); transition-duration: 60ms; }
 
 /* Portrait */
@@ -452,8 +442,6 @@ main { position: relative; z-index: 1; }
 
 /* ---------- Cards ---------- */
 .card {
-  /* Declared so linters / the cascade know they exist; JS overwrites these
-     with px values on mousemove for the cursor-tracking spotlight. */
   --mx: 50%;
   --my: 50%;
 
@@ -466,9 +454,6 @@ main { position: relative; z-index: 1; }
   transform: translateY(-4px);
   box-shadow: var(--glass-shadow-hover);
 }
-/* Cursor-tracking spotlight — JS feeds --mx/--my, the radial-gradient
-   paints between the card's glass background and its children (no z-index
-   needed; default paint order does it). */
 .card::before {
   content: "";
   position: absolute;
@@ -633,8 +618,6 @@ main { position: relative; z-index: 1; }
 .timeline-item { position: relative; margin-bottom: 24px; }
 .timeline-marker {
   position: absolute;
-  /* Line center is at x=11px (left:10px + width:2px/2). Item starts at x=36px
-     (timeline padding-left). Marker must sit at x=1px so 1 + 20/2 = 11 matches. */
   left: -35px; top: 28px;
   width: 20px; height: 20px;
   border-radius: 50%;
@@ -701,7 +684,7 @@ main { position: relative; z-index: 1; }
   font-weight: 500;
 }
 
-/* Card CTA row (e.g. freelance service card) */
+/* Card CTA row */
 .card-cta-row { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* Contact */
@@ -727,6 +710,69 @@ main { position: relative; z-index: 1; }
   padding: 40px 24px 30px;
   color: var(--text-soft);
   font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: var(--glass-bg-strong);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 14px -4px rgba(74, 144, 226, 0.18);
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s var(--ease-out),
+              color 0.25s var(--ease-out),
+              background 0.25s var(--ease-out);
+}
+.theme-toggle:hover { color: var(--text); transform: translateY(-2px); }
+.theme-toggle:active { transform: scale(0.94); transition-duration: 60ms; }
+.theme-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transition: transform 0.4s var(--ease-spring), opacity 0.25s var(--ease-out);
+}
+/* Light theme */
+.theme-icon-sun { transform: rotate(0deg) scale(1); opacity: 1; }
+.theme-icon-moon { transform: rotate(-90deg) scale(0.6); opacity: 0; }
+/* Dark theme: flip */
+.is-dark .theme-icon-sun { transform: rotate(90deg) scale(0.6); opacity: 0; }
+.is-dark .theme-icon-moon { transform: rotate(0deg) scale(1); opacity: 1; }
+
+/* ---------- Language switch fade ---------- */
+[data-i18n] {
+  transition: opacity 0.18s var(--ease-out);
+}
+body.lang-switching [data-i18n] {
+  opacity: 0;
+}
+
+/* ---------- Easter egg toast ---------- */
+.egg-toast-wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 32px;
+  z-index: 300;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+.egg-toast {
+  opacity: 0;
+  white-space: nowrap;
+  font-size: 14px;
 }
 
 /* ---------- Reveal animation ---------- */

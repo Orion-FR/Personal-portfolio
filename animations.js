@@ -51,6 +51,7 @@
         if (els.length) gsap.set(els, { opacity: 0, y: 24 });
       });
       gsap.set('.hero-portrait', { opacity: 0, y: 0, scale: 0.92 });
+      gsap.set('.scroll-hint', { opacity: 0, y: 8 });
 
       const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 0.9 } });
       tl.to('.hero .eyebrow', { y: 0, opacity: 1, duration: 0.7 })
@@ -59,7 +60,9 @@
         .to('.hero-subtitle', { y: 0, opacity: 1, duration: 0.7 }, '-=0.55')
         .to('.hero-tagline', { y: 0, opacity: 1, duration: 0.7 }, '-=0.55')
         .to('.hero-ctas .btn', { y: 0, opacity: 1, stagger: 0.08, duration: 0.7 }, '-=0.5')
-        .to('.hero-portrait', { y: 0, scale: 1, opacity: 1, duration: 1.1, ease: 'power4.out' }, '-=1.1');
+        .to('.hero-portrait', { y: 0, scale: 1, opacity: 1, duration: 1.1, ease: 'power4.out' }, '-=1.1')
+        // Scroll hint arrives ~1s after the rest is settled
+        .to('.scroll-hint', { y: 0, opacity: 0.6, duration: 0.8 }, '+=1');
     } else if (heroExists && reduced) {
       gsap.set('.hero .reveal', { opacity: 1, y: 0 });
     }
@@ -159,8 +162,8 @@
       const TILT = 5;
       document.querySelectorAll('.card').forEach((card) => {
         if (!reduced) gsap.set(card, { transformPerspective: 900 });
-        const rotX = !reduced ? gsap.quickTo(card, 'rotateX', { duration: 0.5, ease: 'power3.out' }) : null;
-        const rotY = !reduced ? gsap.quickTo(card, 'rotateY', { duration: 0.5, ease: 'power3.out' }) : null;
+        const rotX = !reduced ? gsap.quickTo(card, 'rotationX', { duration: 0.5, ease: 'power3.out' }) : null;
+        const rotY = !reduced ? gsap.quickTo(card, 'rotationY', { duration: 0.5, ease: 'power3.out' }) : null;
         card.addEventListener('mouseenter', () => {
           if (!reduced) gsap.to(card, { y: -4, duration: 0.4, ease: 'power3.out' });
         });
@@ -178,7 +181,7 @@
           }
         });
         card.addEventListener('mouseleave', () => {
-          if (!reduced) gsap.to(card, { y: 0, rotateX: 0, rotateY: 0, duration: 0.7, ease: 'power3.out' });
+          if (!reduced) gsap.to(card, { y: 0, rotationX: 0, rotationY: 0, duration: 0.7, ease: 'power3.out' });
         });
       });
     }
@@ -190,8 +193,8 @@
         gsap.set(portrait, { transformPerspective: 1100 });
         const x = gsap.quickTo(portrait, 'x', { duration: 0.9, ease: 'power3.out' });
         const y = gsap.quickTo(portrait, 'y', { duration: 0.9, ease: 'power3.out' });
-        const rotX = gsap.quickTo(portrait, 'rotateX', { duration: 0.9, ease: 'power3.out' });
-        const rotY = gsap.quickTo(portrait, 'rotateY', { duration: 0.9, ease: 'power3.out' });
+        const rotX = gsap.quickTo(portrait, 'rotationX', { duration: 0.9, ease: 'power3.out' });
+        const rotY = gsap.quickTo(portrait, 'rotationY', { duration: 0.9, ease: 'power3.out' });
         window.addEventListener('mousemove', (e) => {
           const px = e.clientX / window.innerWidth - 0.5;
           const py = e.clientY / window.innerHeight - 0.5;
@@ -298,6 +301,90 @@
         },
       });
     });
+
+    /* ---------------- Easter eggs ----------------
+       1) Konami code → rainbow flash on the gradient name + a "secret unlocked"
+          glass-chip toast that fades in/out. Console signature.
+       2) Triple-click on the PR logo → orbit dots spin up briefly. */
+    const showToast = (text) => {
+      let wrap = document.querySelector('.egg-toast-wrap');
+      let toast;
+      if (!wrap) {
+        wrap = document.createElement('div');
+        wrap.className = 'egg-toast-wrap';
+        toast = document.createElement('div');
+        toast.className = 'egg-toast glass-chip';
+        wrap.appendChild(toast);
+        document.body.appendChild(wrap);
+      } else {
+        toast = wrap.querySelector('.egg-toast');
+      }
+      toast.textContent = text;
+      gsap.fromTo(
+        toast,
+        { y: 20, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.4,
+          ease: 'power3.out',
+          onComplete: () => {
+            gsap.to(toast, { y: 20, opacity: 0, duration: 0.5, ease: 'power3.in', delay: 2.4 });
+          },
+        }
+      );
+    };
+
+    // (1) Konami sequence
+    const KONAMI = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+    let konamiIdx = 0;
+    window.addEventListener('keydown', (e) => {
+      const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+      if (key === KONAMI[konamiIdx]) {
+        konamiIdx++;
+        if (konamiIdx === KONAMI.length) {
+          konamiIdx = 0;
+          const grad = document.querySelector('.gradient-text');
+          if (grad && !reduced) {
+            gsap.fromTo(grad,
+              { filter: 'hue-rotate(0deg) saturate(1.5)' },
+              { filter: 'hue-rotate(360deg) saturate(1.5)', duration: 4, ease: 'none', onComplete: () => gsap.set(grad, { clearProps: 'filter' }) }
+            );
+          }
+          showToast('You found a secret. Nice.');
+          // eslint-disable-next-line no-console
+          console.log('%c↑↑↓↓←→←→ B A — welcome, fellow gamer.', 'color:#2a6fbf;font-style:italic');
+        }
+      } else {
+        konamiIdx = key === KONAMI[0] ? 1 : 0;
+      }
+    });
+
+    // (2) Triple-click on the PR logo → orbit dots accelerate
+    const brand = document.querySelector('.nav-brand');
+    if (brand) {
+      let clicks = 0;
+      let timer = null;
+      brand.addEventListener('click', (e) => {
+        clicks++;
+        clearTimeout(timer);
+        timer = setTimeout(() => (clicks = 0), 600);
+        if (clicks >= 3) {
+          clicks = 0;
+          e.preventDefault();
+          const dots = document.querySelectorAll('.orbit-dot');
+          if (dots.length && !reduced) {
+            gsap.fromTo(dots,
+              { scale: 1 },
+              { scale: 1.6, duration: 0.4, ease: 'back.out(2)', yoyo: true, repeat: 5, stagger: 0.06 }
+            );
+          }
+          // eslint-disable-next-line no-console
+          console.log('%cCurious one. Hire me: contact@paulrobain.fr', 'color:#2a6fbf;font-style:italic');
+          showToast('Hi. Curious, are we?');
+        }
+      });
+    }
 
     /* ---------------- Recompute layouts after fonts load ---------------- */
     if (document.fonts && document.fonts.ready) {

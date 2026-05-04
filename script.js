@@ -446,14 +446,23 @@
   };
 
   let currentLang = detectInitialLang();
-  applyLang(currentLang);
+  applyLang(currentLang); // initial render: no fade (page still loading)
+
+  const switchLang = (lang) => {
+    if (lang === currentLang) return;
+    currentLang = lang;
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+    document.body.classList.add('lang-switching');
+    setTimeout(() => {
+      applyLang(lang);
+      requestAnimationFrame(() => {
+        document.body.classList.remove('lang-switching');
+      });
+    }, 180);
+  };
 
   document.querySelectorAll('.lang-btn').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      currentLang = btn.dataset.lang;
-      localStorage.setItem(STORAGE_KEY, currentLang);
-      applyLang(currentLang);
-    });
+    btn.addEventListener('click', () => switchLang(btn.dataset.lang));
   });
 
   /* ---------------- Scroll reveal ---------------- */
@@ -495,4 +504,14 @@
   /* ---------------- Footer year ---------------- */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ---------------- Theme toggle ---------------- */
+  const themeBtn = document.querySelector('.theme-toggle');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      const root = document.documentElement;
+      const nowDark = root.classList.toggle('is-dark');
+      try { localStorage.setItem('paulr.theme', nowDark ? 'dark' : 'light'); } catch (e) {}
+    });
+  }
 })();
