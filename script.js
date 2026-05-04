@@ -125,7 +125,7 @@
 
       'about.title': 'À propos',
       'about.p1': "Je suis étudiant en ingénierie informatique à l'<strong>EPITA</strong>, actuellement en stage de développeur front-end chez <strong>Airbus</strong>. J'aime transformer des besoins métiers complexes en interfaces qui semblent évidentes.",
-      'about.p2': "Au-delà du code, je suis passionné d'automobile et fier ambassadeur <strong>Alfa Romeo</strong>. Que je construise un POC ou que je règle un moteur, je cherche la même chose : précision, soin du détail, et cette petite touche qui fait toute la différence.",
+      'about.p2': "Au-delà du code, je suis passionné d'automobile et fier ambassadeur <strong>Alfa Romeo</strong>. Que je construise un POC ou que je modifie un moteur, je cherche la même chose : précision, soin du détail, et cette petite touche qui fait toute la différence.",
       'about.facts_title': 'En bref',
       'about.fact_1': 'Toulouse, France',
       'about.fact_2': 'EPITA · Ing. 2029',
@@ -457,18 +457,20 @@
   });
 
   /* ---------------- Scroll reveal ---------------- */
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12, rootMargin: '0px 0px -60px 0px' }
-  );
-  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  if (!window.__gsapReveal) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -60px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  }
 
   /* ---------------- Nav scroll state ---------------- */
   const nav = document.querySelector('.nav');
