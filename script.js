@@ -199,7 +199,7 @@
 
       'proj.medglass_date': '2025 — 2026 · En production',
       'proj.medglass_title': 'MedGlass — Plateforme de planification hospitalière',
-      'proj.medglass_desc': 'Planification intelligente pour équipes médicales : gardes, astreintes, congés, échanges, matrice de compétences — tout au même endroit.',
+      'proj.medglass_desc': 'Planification intelligente pour équipes médicales : gardes, astreintes, congés, échanges, matrice de compétences... Tout au même endroit.',
       'proj.medglass_b1': 'Application full-stack Next.js 14, en production sur medglass.fr.',
       'proj.medglass_b2': 'TypeScript de bout en bout, UI Tailwind, backend async.',
       'proj.medglass_b3': 'Produit multi-repo livré du concept à la mise en ligne.',
@@ -214,7 +214,7 @@
       'proj.octane_date': '2026 · Projet perso',
       'proj.octane_title': 'OctaneLab — Calculateur de mix éthanol',
       'proj.octane_desc': 'Calculateur mobile-first pour les conducteurs flex-fuel indiquant le volume d\'E85 et d\'essence injecter pour atteindre un ratio d\'éthanol cible.',
-      'proj.octane_b1': 'Vanilla JS, trois fichiers, zéro dépendance — fonctionne offline en page statique.',
+      'proj.octane_b1': 'Vanilla JS, trois fichiers, zéro dépendance : fonctionne offline en page statique.',
       'proj.octane_b2': 'Applique automatiquement les taux saisonniers d\'éthanol (85% été / 65% hiver, EN 15293).',
       'proj.octane_b3': 'Presets véhicules persistés en localStorage ; alerte si la cible est inatteignable.',
 
@@ -224,8 +224,8 @@
       'proj.soon_desc': 'De nouveaux projets et expérimentations viendront s\'ajouter ici. Revenez y jeter un œil, ou écrivez-moi sur LinkedIn pour en discuter.',
 
       'freelance.title': 'Conception de sites web en freelance',
-      'freelance.p1': 'À côté de mes études et de mon stage, je conçois et développe aussi des <strong>sites web sur mesure</strong> en freelance — pour des particuliers, des créateurs et des petites entreprises. Du premier croquis à la mise en ligne, je m\'occupe de tout.',
-      'freelance.p2': 'Esthétique soignée, performances fluides et un rendu vraiment fidèle à votre identité. Envie d\'un devis ? Un simple mail suffit — c\'est gratuit et sans engagement.',
+      'freelance.p1': 'À côté de mes études et de mon stage, je conçois et développe aussi des <strong>sites web sur mesure</strong> en freelance : pour des particuliers, des créateurs et des petites entreprises. Du premier croquis à la mise en ligne, je m\'occupe de tout.',
+      'freelance.p2': 'Esthétique soignée, performances fluides et un rendu vraiment fidèle à votre identité. Envie d\'un devis ? Un simple mail suffit. C\'est gratuit et sans engagement.',
       'freelance.cta': 'Demander un devis',
       'freelance.cta_secondary': 'contact@paulrobain.fr',
       'freelance.offer_title': 'Ce que je propose',

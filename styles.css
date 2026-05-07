@@ -578,7 +578,7 @@ main { position: relative; z-index: 1; }
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: 24px;
-  align-items: start;
+  align-items: stretch;
 }
 .about-lead {
   font-size: 18px;
@@ -695,12 +695,13 @@ main { position: relative; z-index: 1; }
   gap: 6px;
   font-size: 14px;
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.4;
   color: var(--accent-deep);
   transition: color 0.2s var(--ease-out), gap 0.2s var(--ease-out);
 }
 .card-link svg {
   flex-shrink: 0;
+  display: block;
   transition: transform 0.2s var(--ease-out);
 }
 .card-link:hover { color: var(--accent); gap: 9px; }
