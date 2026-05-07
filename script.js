@@ -69,6 +69,30 @@
       'proj.crossword_b1': 'Built an OCR system that dynamically extracts grid structures from images.',
       'proj.crossword_b2': 'Implemented a logic-solving engine to automate complex puzzle processing.',
       'proj.crossword_b3': 'Optimized image preprocessing for reliable recognition in variable conditions.',
+
+      'proj.medglass_date': '2025 — 2026 · Production',
+      'proj.medglass_title': 'MedGlass — Hospital scheduling platform',
+      'proj.medglass_desc': 'Smart shift planning for healthcare teams: on-call rotations, leave, swaps, and a competency matrix — all in one place.',
+      'proj.medglass_b1': 'Full-stack Next.js 14 app, live in production at medglass.fr.',
+      'proj.medglass_b2': 'TypeScript end-to-end, Tailwind UI, async backend service.',
+      'proj.medglass_b3': 'Multi-repo product shipped from concept to deployment.',
+
+      'proj.apex_date': '2026 · Group project',
+      'proj.apex_title': 'APEX — AI Trading Bot',
+      'proj.apex_desc': 'Multi-strategy paper / live trading bot with a real-time React dashboard. Three signal engines fused into one composite score, half-Kelly position sizing.',
+      'proj.apex_b1': 'Async FastAPI + SQLAlchemy backend, APScheduler-driven trading loop.',
+      'proj.apex_b2': 'Momentum, mean reversion, and sentiment strategies, weighted composite score.',
+      'proj.apex_b3': 'Half-Kelly Criterion sizing, capped at 10% per asset.',
+
+      'proj.octane_date': '2026 · Personal project',
+      'proj.octane_title': 'OctaneLab — Ethanol fuel mix calculator',
+      'proj.octane_desc': 'Mobile-first calculator that tells flex-fuel drivers exactly how many liters of E85 vs. gasoline to pump for a target ethanol ratio.',
+      'proj.octane_b1': 'Vanilla JS, three files, zero dependencies : works offline as a static page.',
+      'proj.octane_b2': 'Auto-applies seasonal ethanol rates (85% summer / 65% winter, EN 15293).',
+      'proj.octane_b3': 'Vehicle presets persisted in localStorage; warns on unreachable targets.',
+
+      'proj.view_site': 'Visit site',
+      'proj.view_site_offline': 'Visit site (Offline)',
       'proj.soon_title': 'More coming soon',
       'proj.soon_desc': 'New projects and experiments will land here. Check back, or ping me on LinkedIn to chat about what I\'m working on.',
 
@@ -172,6 +196,30 @@
       'proj.crossword_b1': 'Système d\'OCR extrayant dynamiquement la structure des grilles depuis des images.',
       'proj.crossword_b2': 'Moteur logique automatisant la résolution de puzzles complexes.',
       'proj.crossword_b3': 'Optimisation du pré-traitement d\'image pour une reconnaissance fiable en conditions variables.',
+
+      'proj.medglass_date': '2025 — 2026 · En production',
+      'proj.medglass_title': 'MedGlass — Plateforme de planification hospitalière',
+      'proj.medglass_desc': 'Planification intelligente pour équipes médicales : gardes, astreintes, congés, échanges, matrice de compétences — tout au même endroit.',
+      'proj.medglass_b1': 'Application full-stack Next.js 14, en production sur medglass.fr.',
+      'proj.medglass_b2': 'TypeScript de bout en bout, UI Tailwind, backend async.',
+      'proj.medglass_b3': 'Produit multi-repo livré du concept à la mise en ligne.',
+
+      'proj.apex_date': '2026 · Projet de groupe',
+      'proj.apex_title': 'APEX — Bot de trading IA',
+      'proj.apex_desc': 'Bot de trading paper / live multi-stratégies avec dashboard React temps réel. Trois moteurs de signaux fusionnés en un score composite, sizing demi-Kelly.',
+      'proj.apex_b1': 'Backend async FastAPI + SQLAlchemy, boucle de trading pilotée par APScheduler.',
+      'proj.apex_b2': 'Stratégies momentum, mean reversion et sentiment, fusionnées en score pondéré.',
+      'proj.apex_b3': 'Sizing demi-Kelly Criterion, plafonné à 10% par actif.',
+
+      'proj.octane_date': '2026 · Projet perso',
+      'proj.octane_title': 'OctaneLab — Calculateur de mix éthanol',
+      'proj.octane_desc': 'Calculateur mobile-first pour les conducteurs flex-fuel indiquant le volume d\'E85 et d\'essence injecter pour atteindre un ratio d\'éthanol cible.',
+      'proj.octane_b1': 'Vanilla JS, trois fichiers, zéro dépendance — fonctionne offline en page statique.',
+      'proj.octane_b2': 'Applique automatiquement les taux saisonniers d\'éthanol (85% été / 65% hiver, EN 15293).',
+      'proj.octane_b3': 'Presets véhicules persistés en localStorage ; alerte si la cible est inatteignable.',
+
+      'proj.view_site': 'Voir le site',
+      'proj.view_site_offline': 'Voir le site (Offline)',
       'proj.soon_title': 'D\'autres projets arrivent',
       'proj.soon_desc': 'De nouveaux projets et expérimentations viendront s\'ajouter ici. Revenez y jeter un œil, ou écrivez-moi sur LinkedIn pour en discuter.',
 
@@ -275,6 +323,30 @@
       'proj.crossword_b1': 'Sistema OCR que extrae dinámicamente la estructura de cuadrículas desde imágenes.',
       'proj.crossword_b2': 'Motor lógico que automatiza la resolución de puzzles complejos.',
       'proj.crossword_b3': 'Optimización del preprocesado de imagen para un reconocimiento fiable en condiciones variables.',
+
+      'proj.medglass_date': '2025 — 2026 · En producción',
+      'proj.medglass_title': 'MedGlass — Plataforma de planificación hospitalaria',
+      'proj.medglass_desc': 'Planificación inteligente para equipos sanitarios: guardias, ausencias, permisos, intercambios, matriz de competencias — todo en un solo lugar.',
+      'proj.medglass_b1': 'Aplicación full-stack Next.js 14, en producción en medglass.fr.',
+      'proj.medglass_b2': 'TypeScript de extremo a extremo, UI Tailwind, backend asíncrono.',
+      'proj.medglass_b3': 'Producto multi-repo entregado del concepto a la puesta en línea.',
+
+      'proj.apex_date': '2026 · Proyecto en equipo',
+      'proj.apex_title': 'APEX — Bot de trading con IA',
+      'proj.apex_desc': 'Bot de trading paper / en vivo multi-estrategia con dashboard React en tiempo real. Tres motores de señales fusionados en un score compuesto, sizing semi-Kelly.',
+      'proj.apex_b1': 'Backend asíncrono FastAPI + SQLAlchemy, bucle de trading pilotado por APScheduler.',
+      'proj.apex_b2': 'Estrategias momentum, mean reversion y sentiment, fusionadas en un score ponderado.',
+      'proj.apex_b3': 'Sizing semi-Kelly Criterion, limitado al 10% por activo.',
+
+      'proj.octane_date': '2026 · Proyecto personal',
+      'proj.octane_title': 'OctaneLab — Calculadora de mezcla E85',
+      'proj.octane_desc': 'Calculadora mobile-first que indica a conductores flex-fuel cuántos litros de E85 vs. gasolina cargar para alcanzar un ratio de etanol objetivo.',
+      'proj.octane_b1': 'Vanilla JS, tres archivos, cero dependencias — funciona offline como página estática.',
+      'proj.octane_b2': 'Aplica automáticamente las tasas estacionales de etanol (85% verano / 65% invierno, EN 15293).',
+      'proj.octane_b3': 'Presets de vehículos persistidos en localStorage; advierte si el objetivo es inalcanzable.',
+
+      'proj.view_site': 'Visitar el sitio',
+      'proj.view_site_offline': 'Visitar el sitio (Offline)',
       'proj.soon_title': 'Más proyectos próximamente',
       'proj.soon_desc': 'Aquí irán llegando nuevos proyectos y experimentos. Vuelve a echar un vistazo, o escríbeme en LinkedIn para charlar.',
 
@@ -378,6 +450,30 @@
       'proj.crossword_b1': 'Sistema OCR che estrae dinamicamente la struttura delle griglie dalle immagini.',
       'proj.crossword_b2': 'Motore logico per automatizzare la risoluzione di puzzle complessi.',
       'proj.crossword_b3': 'Ottimizzazione del preprocessing delle immagini per un riconoscimento affidabile in condizioni variabili.',
+
+      'proj.medglass_date': '2025 — 2026 · In produzione',
+      'proj.medglass_title': 'MedGlass — Piattaforma di pianificazione ospedaliera',
+      'proj.medglass_desc': 'Pianificazione intelligente per team sanitari: turni, reperibilità, ferie, scambi, matrice delle competenze — tutto in un unico posto.',
+      'proj.medglass_b1': 'Applicazione full-stack Next.js 14, in produzione su medglass.fr.',
+      'proj.medglass_b2': 'TypeScript end-to-end, UI Tailwind, backend asincrono.',
+      'proj.medglass_b3': 'Prodotto multi-repo portato dal concept alla messa online.',
+
+      'proj.apex_date': '2026 · Progetto di gruppo',
+      'proj.apex_title': 'APEX — Bot di trading IA',
+      'proj.apex_desc': 'Bot di trading paper / live multi-strategia con dashboard React in tempo reale. Tre motori di segnali fusi in uno score composito, sizing mezzo-Kelly.',
+      'proj.apex_b1': 'Backend asincrono FastAPI + SQLAlchemy, ciclo di trading pilotato da APScheduler.',
+      'proj.apex_b2': 'Strategie momentum, mean reversion e sentiment, fuse in uno score ponderato.',
+      'proj.apex_b3': 'Sizing mezzo-Kelly Criterion, limitato al 10% per asset.',
+
+      'proj.octane_date': '2026 · Progetto personale',
+      'proj.octane_title': 'OctaneLab — Calcolatore di mix E85',
+      'proj.octane_desc': 'Calcolatore mobile-first che dice ai conducenti flex-fuel quanti litri di E85 vs benzina pompare per raggiungere un rapporto di etanolo target.',
+      'proj.octane_b1': 'Vanilla JS, tre file, zero dipendenze — funziona offline come pagina statica.',
+      'proj.octane_b2': 'Applica automaticamente i tassi stagionali di etanolo (85% estate / 65% inverno, EN 15293).',
+      'proj.octane_b3': 'Preset veicoli persistiti in localStorage; avvisa se il target è irraggiungibile.',
+
+      'proj.view_site': 'Visita il sito',
+      'proj.view_site_offline': 'Visita il sito (Offline)',
       'proj.soon_title': 'Altri progetti in arrivo',
       'proj.soon_desc': 'Qui arriveranno nuovi progetti ed esperimenti. Torna a dare un\'occhiata, o scrivimi su LinkedIn per parlarne.',
 
