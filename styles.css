@@ -650,10 +650,14 @@ main { position: relative; z-index: 1; }
 .card-lang { text-align: center; padding: 28px 22px; }
 .card-lang .flag {
   display: inline-block;
-  font-size: 44px;
+  width: 52px;
+  height: 52px;
   margin-bottom: 14px;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
+  border-radius: 50%;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.22));
+  transition: transform 0.4s var(--ease-spring);
 }
+.card-lang:hover .flag { transform: scale(1.08) rotate(-3deg); }
 .card-lang .card-title { margin-bottom: 4px; }
 .card-lang .card-org { margin-bottom: 18px; }
 .cefr-bar {
